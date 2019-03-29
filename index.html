@@ -1,0 +1,39 @@
+<!doctype html<
+<html lang=it>
+<head>
+<Title>Saluto</title>
+<!--link al CSS di getskeleton-->
+<link rel=stylesheet href=http://getskeleton.com/dist/css/normalize.css>
+<link rel=stylesheet href=http://getskeleton.com/dist/css/skeleton.css>
+<script>
+function saluta(){
+/* recupero il dato di input */
+var nome=document.forms[0].nome.value;
+/* mostra il risultato */
+document.getElementById("risultato").innerHTML="Ciao "+nome+", come stai?";
+}
+function annulla(){
+document.getElementById("risultato").innerHTML=" ";
+}
+</script>
+</head>
+<body>
+<div class=container>
+<div class=row>
+<div class="twelve colums">
+<center>
+<h1>Saluto</h1>
+<p>Srivi il tuo nome</p>
+<img src=saluto.png class=u-full-width>
+</center>
+<form name=saluto>
+<label for=nome<Nome</label><br>
+<input type=text name=nome required ><br>
+<input type=reset value=Annulla onclick=annulla()><br>
+<button type=button class=bytton-primary onclick=saluta()>Saluta</button>
+<p id=risultato> </p>
+</form>
+</div>
+</div>
+</body>
+</html>
